@@ -1,0 +1,51 @@
+
+* {
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.spotify-logo {
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+  @media screen and (min-width: 960px) {
+    max-width: 300px;
+  }
+}
+
+.spotify-body .header {
+  display: flex;
+  justify-content: space-between;
+  &__left {
+    input {
+      margin-left: 10px;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    h4 {
+      margin-left: 10px;
+    }
+  }
+}

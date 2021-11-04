@@ -1,0 +1,23 @@
+.spotify-window {
+  // background: blue;
+  padding: 20px 0;
+  @media screen and (min-width: 1400px) {
+    // margin-left: -100%;
+    // margin-right: -100%;
+    // overflow-x: hidden;
+  }
+  
+  h4 {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  @media screen and (min-width: 960px) {
+    h4 {
+      font-size: 24px;
+    
+    }
+  }
+  @media screen and (min-width: 1400px) {
+  
+  }
+}

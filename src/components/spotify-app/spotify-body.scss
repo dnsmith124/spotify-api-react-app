@@ -1,0 +1,84 @@
+.spotify-body {
+  height: 100vh;
+  flex: 1;
+  color: white;
+  padding: 30px;
+  background: linear-gradient(rgb(91, 87, 115), rgba(0, 0, 0, 1));
+  overflow-y: overlay;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    @media screen and (min-width: 960px) {
+      flex-wrap: nowrap;
+    }
+  }
+  &__current-playlist {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    @media screen and (min-width: 960px) {
+      display: block;
+      width: auto;
+    }
+
+    &__image {
+      max-width: 200px;
+    }
+    &__list {
+      h2 {
+        margin-top: 10px;
+        a {
+          color: #fff;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        } 
+      }
+    }
+  }
+  &__songs {
+    margin-left: 20px;
+  }
+}
+.spotify-body::-webkit-scrollbar {
+  display: none;
+}
+.spotify-body__info {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+.spotify-body__infoText {
+  flex: 1;
+}
+.spotify-body__infoText > h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.spotify-body__infoText > p {
+  font-size: 14px;
+}
+.spotify-body__info > img {
+  height: 20vw;
+  margin: 0 20px;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+.spotify-body__icons {
+  display: flex;
+  align-items: center;
+}
+.spotify-body__icons > .MuiSvgIcon-root {
+  margin-right: 20px;
+}
+.spotify-body__shuffle {
+  font-size: 80px !important;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.spotify-body__shuffle:hover {
+  transition: 100ms transform ease-in;
+  transform: scale(1.08);
+}

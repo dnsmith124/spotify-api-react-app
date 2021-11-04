@@ -1,0 +1,41 @@
+.spotify-sidebar-option {
+  display: flex;
+  align-items: center;
+  color: gray;
+  min-height: 50px;
+  cursor: pointer;
+  transition: 200ms color ease-in;
+  button {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.spotify-sidebar-option:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.spotify-sidebar-option__icon {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.spotify-sidebar-option > p {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.spotify-sidebar-option h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 250px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 200px;
+  }
+  @media screen and (min-width: 960px) {
+    max-width: 250px;
+  }
+}

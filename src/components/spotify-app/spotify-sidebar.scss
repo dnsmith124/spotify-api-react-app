@@ -1,0 +1,35 @@
+.spotify-sidebar {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 30px;
+  margin: 0 30px 30px 0;
+}
+
+.spotify-sidebar > hr {
+  border: 1px solid #282828;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.spotify-sidebar__logo {
+  height: 100px;
+  width: auto;
+  padding: 10px;
+  margin: auto;
+}
+
+.spotify-sidebar__title {
+  margin-left: 5px;
+  padding: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.spotify-sidebar__options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @media screen and (min-width: 768px) {
+    display: block;
+
+  }
+}
