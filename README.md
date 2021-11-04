@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Working with Spotify's Web API via react-spotify-api
+
+A small series of components that can be used to login to Spotify and display the logged-in users's playlists.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
