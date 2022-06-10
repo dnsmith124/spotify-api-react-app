@@ -65,11 +65,9 @@ const Spotify = () => {
 
   return (
     <div className="spotify-window">
-      <div className="container-xxl">
-        {token 
-          ? <SpotifyApp spotify={spotify} /> 
-          : <SpotifyLogin loginUrl={loginUrl} />}
-      </div>
+      {token 
+        ? <SpotifyApp spotify={spotify} /> 
+        : <SpotifyLogin loginUrl={loginUrl} />}
     </div>
   );
 }

@@ -1,6 +1,11 @@
 .login {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+  width: 300px;
+  margin: 0 auto;
 }
 
 .login > img {
@@ -9,6 +14,7 @@
 }
 
 .login > a {
+  display: block;
   padding: 20px;
   border-radius: 99px;
   font-weight: 600;
