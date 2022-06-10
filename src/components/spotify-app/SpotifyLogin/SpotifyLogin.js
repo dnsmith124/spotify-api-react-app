@@ -1,5 +1,5 @@
 import React from "react";
-import spotifyLogo from './SpotifyLogo.png';
+import spotifyLogo from '../../../Assets/SpotifyLogo.png';
 import "./spotify-login.scss";
 
 const SpotifyLogin = ({ loginUrl }) => {
