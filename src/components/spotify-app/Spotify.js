@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import SpotifyLogin from './SpotifyLogin';
 import SpotifyApp from './SpotifyApp';
 import SpotifyWebApi from "spotify-web-api-js";
@@ -36,7 +36,7 @@ export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${re
 
 const Spotify = () => {
 
-  const [{ user, token }, dispatch] = useDataLayerValue();
+  const [{ token }, dispatch] = useDataLayerValue();
 
   useEffect(() => {
     const hash = getTokenFromUrl();
@@ -61,7 +61,7 @@ const Spotify = () => {
         });
       });
     }
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="spotify-window">

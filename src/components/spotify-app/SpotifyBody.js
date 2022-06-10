@@ -5,7 +5,7 @@ import { useDataLayerValue } from "../../DataLayer";
 import SongRow from "./SongRow";
 
 function SpotifyBody({ spotify }) {
-  const [{ currentPlaylist, currentPlaylistID, token }, dispatch] = useDataLayerValue();
+  const [{ currentPlaylist, currentPlaylistID }, dispatch] = useDataLayerValue();
 
   useEffect(() => { 
     spotify.getPlaylist(currentPlaylistID).then((playlist) => {
@@ -15,7 +15,7 @@ function SpotifyBody({ spotify }) {
       });
     });
     console.log(currentPlaylist);
-  }, [currentPlaylistID]);
+  }, [currentPlaylistID, currentPlaylist, dispatch, spotify]);
 
   return (
     <div className="spotify-body">
@@ -26,13 +26,13 @@ function SpotifyBody({ spotify }) {
             <div className="spotify-body__current-playlist">
               <img src={currentPlaylist?.images[0]?.url} alt=""  className="spotify-body__current-playlist__image"/>
               <div className="spotify-body__current-playlist__list">
-                <h2><a href={currentPlaylist?.external_urls["spotify"]} target="_blank">{currentPlaylist?.name}</a></h2>
+                <h2><a href={currentPlaylist?.external_urls["spotify"]} target="_blank" rel="noreferrer">{currentPlaylist?.name}</a></h2>
                 <p>{currentPlaylist?.description}</p>
               </div>
             </div>
             <div className="spotify-body__songs">
-              {currentPlaylist?.tracks.items.map((item) => (
-                <SongRow track={item.track} />
+              {currentPlaylist?.tracks.items.map((item, i) => (
+                <SongRow track={item.track} key={i} />
               ))}
             </div>
           </div>

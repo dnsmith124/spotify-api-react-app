@@ -5,6 +5,7 @@ import "./sidebar-option.scss";
 const SpotifySidebarOption = ({ title, Icon, id }) => {
 
   const [{ currentPlaylist }, dispatch] = useDataLayerValue();
+  let currentPlaylistID = (currentPlaylist !== null && currentPlaylist.id !== undefined ) ? currentPlaylist.id : -1;
 
   const handleClick = () => {
     dispatch({
@@ -15,7 +16,7 @@ const SpotifySidebarOption = ({ title, Icon, id }) => {
   return (
     <div className="spotify-sidebar-option">
       {Icon && <Icon className="spotify-sidebar-option__icon" />}
-      <button onClick={handleClick}><h4>{title}</h4></button>
+      <button onClick={handleClick} className={(currentPlaylistID === id) ? 'active' : 'inactive'}><h4>{title}</h4></button>
     </div>
   );
 }

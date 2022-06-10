@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Spotify  from "./components/spotify-app/Spotify";
 import reducer,{ initialState } from './reducer';
