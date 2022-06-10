@@ -54,7 +54,7 @@ const Spotify = () => {
           user,
         });
       });
-      spotify.getUserPlaylists().then((playlists) => {
+      spotify.getUserPlaylists({limit:50}).then((playlists) => {
         dispatch({
           type: "SET_PLAYLISTS",
           playlists,

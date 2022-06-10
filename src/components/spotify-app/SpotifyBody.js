@@ -8,6 +8,8 @@ function SpotifyBody({ spotify }) {
   const [{ currentPlaylist, currentPlaylistID }, dispatch] = useDataLayerValue();
 
   useEffect(() => { 
+    if(currentPlaylist !== null && currentPlaylistID === currentPlaylist.id)
+      return;
     spotify.getPlaylist(currentPlaylistID).then((playlist) => {
       dispatch({
         type: "SET_CURRENT_PLAYLIST",
@@ -37,25 +39,6 @@ function SpotifyBody({ spotify }) {
             </div>
           </div>
         : <h2>No Playlist Selected</h2>  }
-
-      {/* <div className="spotify-body__info">
-        <img src={discover_weekly?.images[0]?.url} alt="" />
-        <div className="spotify-body__infoText">
-          <strong>PLAYLIST</strong>
-          <h2>Discover Weekly</h2>
-          <p>{discover_weekly?.description}</p>
-        </div>
-      </div>
-      <div className="spotify-body__songs">
-        <div className="spotify-body__icons">
-          <PlayCircleFilled className="spotify-body__shuffle" />
-          <Favorite fontSize="large" />
-          <MoreHoriz />
-        </div>
-        {discover_weekly?.tracks.items.map((item) => (
-          <SongRow track={item.track} />
-        ))}
-      </div> */}
     </div>
   );
 }
