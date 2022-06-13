@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import SpotifyLogin from './SpotifyLogin';
-import SpotifyApp from './SpotifyApp';
+import SpotifyLogin from '../SpotifyLogin/SpotifyLogin';
+import SpotifyApp from '../SpotifyApp/SpotifyApp';
 import SpotifyWebApi from "spotify-web-api-js";
-import { useDataLayerValue } from '../../DataLayer';
+import { useDataLayerValue } from '../../../DataLayer';
 import "./spotify.scss";
 
 const spotify = new SpotifyWebApi();
@@ -65,11 +65,9 @@ const Spotify = () => {
 
   return (
     <div className="spotify-window">
-      <div className="container-xxl">
-        {token 
-          ? <SpotifyApp spotify={spotify} /> 
-          : <SpotifyLogin loginUrl={loginUrl} />}
-      </div>
+      {token 
+        ? <SpotifyApp spotify={spotify} /> 
+        : <SpotifyLogin loginUrl={loginUrl} />}
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import "./spotify-app.scss";
-import SpotifyBody from "./SpotifyBody";
-import SpotifySidebar from "./SpotifySidebar";
-import SpotifyFooter from "./SpotifyFooter";
+import SpotifyBody from "../SpotifyBody/SpotifyBody";
+import SpotifySidebar from "../SpotifySidebar/SpotifySidebar";
+import SpotifyFooter from "../SpotifyFooter/SpotifyFooter";
 
 const SpotifyApp = ({ spotify }) => {
   

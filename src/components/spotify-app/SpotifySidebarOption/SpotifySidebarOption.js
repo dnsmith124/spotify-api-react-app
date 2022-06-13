@@ -1,5 +1,5 @@
 import React from "react";
-import { useDataLayerValue } from '../../DataLayer';
+import { useDataLayerValue } from '../../../DataLayer';
 import "./sidebar-option.scss";
 
 const SpotifySidebarOption = ({ title, Icon, id }) => {

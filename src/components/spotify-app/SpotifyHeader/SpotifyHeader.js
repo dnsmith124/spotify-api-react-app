@@ -1,7 +1,7 @@
 import React from "react";
 import "./spotify-header.scss";
 import { Avatar } from "@material-ui/core";
-import { useDataLayerValue } from "../../DataLayer";
+import { useDataLayerValue } from "../../../DataLayer";
 
 function SpotifyHeader() {
   const [{ user }] = useDataLayerValue();

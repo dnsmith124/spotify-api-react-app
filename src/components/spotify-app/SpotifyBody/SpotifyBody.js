@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import "./spotify-body.scss";
-import SpotifyHeader from "./SpotifyHeader";
-import { useDataLayerValue } from "../../DataLayer";
-import SongRow from "./SongRow";
+import SpotifyHeader from "../SpotifyHeader/SpotifyHeader";
+import { useDataLayerValue } from "../../../DataLayer";
+import SongRow from "../SongRow/SongRow";
 
 function SpotifyBody({ spotify }) {
   const [{ currentPlaylist, currentPlaylistID }, dispatch] = useDataLayerValue();

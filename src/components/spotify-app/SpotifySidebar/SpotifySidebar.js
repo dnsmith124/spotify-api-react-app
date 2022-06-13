@@ -1,8 +1,8 @@
 import React from "react";
 import "./spotify-sidebar.scss";
-import SpotifySidebarOption from "./SpotifySidebarOption";
-import { useDataLayerValue } from "../../DataLayer";
-import spotifyLogo from './SpotifyLogo.png';
+import SpotifySidebarOption from "../SpotifySidebarOption/SpotifySidebarOption";
+import { useDataLayerValue } from "../../../DataLayer";
+import spotifyLogo from '../../../Assets/SpotifyLogo.png';
 
 function SpotifySidebar() {
   const [{ playlists }] = useDataLayerValue();
